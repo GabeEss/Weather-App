@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    border: 0;
+}
+
+#content {
+    background-color: white;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+text-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
