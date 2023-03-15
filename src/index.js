@@ -9,20 +9,23 @@ const container = document.getElementById('content');
 
 searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    // searchForm.classList.add('hidden');
-    // const loadingText = document.createElement("span");
-    // loadingText.classList.add("loading-text");
-    // loadingText.textContent = "LOADING...";
-    // container.appendChild(loadingText);
+    searchForm.classList.add('hidden');
+    const loadingText = document.createElement("span");
+    loadingText.classList.add("loading-text");
+    loadingText.textContent = "LOADING...";
+    container.appendChild(loadingText);
     
     const userInput = getUserInput();
     const weatherReport = await getWeather(userInput);
     if(weatherReport) {
-        console.log(weatherReport);
+        // console.log(weatherReport);
         changeBackground(weatherReport);
         changeName(weatherReport);
+        container.removeChild(loadingText);
+        searchForm.classList.remove('hidden');
     }
-
-    // container.removeChild(loadingText);
-    // searchForm.classList.remove('hidden');
+    else {
+        container.removeChild(loadingText);
+        searchForm.classList.remove('hidden');
+    }
 })

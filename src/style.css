@@ -48,7 +48,7 @@ text-container div {
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
 }
 
 .loading-text {

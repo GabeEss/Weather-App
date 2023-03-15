@@ -1,5 +1,5 @@
 const apiKey = "c003503b588d10abe9229a25f55f26eb"; // This is a free API key.
-const WAIT_LIMIT = 2000; // Wait two seconds for a response and then throw an error.
+const WAIT_LIMIT = 6000; // Wait six seconds for a response and then throw an error.
 export default async function getWeather(search) {
 
         const getData = new Promise(async (resolve, reject) => {
