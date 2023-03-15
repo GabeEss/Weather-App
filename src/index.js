@@ -1,7 +1,8 @@
 import './style.css';
 import getUserInput from './user-input';
 import getWeather from './request-weather';
-import changeBackground from './change-background';
+import changeBackground from './set-temperature-cloudcover';
+import changeName from './set-city-country';
 
 const searchForm = document.getElementById('search-form');
 
@@ -12,5 +13,6 @@ searchForm.addEventListener('submit', async (event) => {
     if(weatherReport) {
         console.log(weatherReport);
         changeBackground(weatherReport);
+        changeName(weatherReport);
     }
 })

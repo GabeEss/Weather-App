@@ -10,13 +10,21 @@
 <body>
     <div id="content">
         <text-container>
-            <div id="city-name"></div>
-            <div id="country"></div>
-            <div id="temperature"></div>
-            <div id="cloud-cover"></div>
+            <div class="names">
+                <city id="city-name"></city>
+                <country id="country"></country>
+            </div>
+            <div class="temperature">
+                <label for="temperature" id="temp-label"></label>
+                <temp id="temperature"><temp/>
+            </div>
+            <div class="cloud-cover">
+                <label for="cloud-cover" id="cloud-label"></label>
+                <cloud id="cloud-cover"></cloud>
+            </div>
         </text-container>
         <form id="search-form">
-            <input type="text" id="search-bar" name="location" placeholder="Enter a location." title="">
+            <input type="text" id="search-bar" name="location" placeholder="Enter a major location." title="Enter a major city.">
             <button type="submit">Search</button>
         </form>
     </div>
