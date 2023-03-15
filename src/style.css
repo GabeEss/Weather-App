@@ -46,3 +46,13 @@ text-container div {
     justify-content: center;
     align-items: center;
 }
+
+.hidden {
+    display: none;
+}
+
+.loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
